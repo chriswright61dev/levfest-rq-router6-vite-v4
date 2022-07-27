@@ -94,4 +94,9 @@ p {
   .content {
     margin-top: 8rem;
   }
+
+  .content-text-link {
+    text-align: center;
+    padding-bottom: 8rem;
+  }
 }

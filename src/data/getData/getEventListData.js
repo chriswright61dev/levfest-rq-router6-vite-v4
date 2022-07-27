@@ -1,11 +1,7 @@
 import { getData } from "../getData";
+import makeQueryURL from "../makeQueryURL";
 export async function getEventListData() {
   //eventsData
   const thisyear = new Date().getFullYear();
-  const url =
-    "https://www.levenshulmecommunityfestival.co.uk/api_levfest_events_list/?event_year=" +
-    thisyear;
-
-  // console.log(url);
-  return getData(url);
+  return getData(makeQueryURL("events_list/?event_year=", thisyear));
 }

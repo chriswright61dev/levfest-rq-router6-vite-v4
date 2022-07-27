@@ -1,7 +1,6 @@
 import { getData } from "../getData";
+import makeURL from "../makeURL";
 
 export async function getBasicData() {
-  const url =
-    "https://www.levenshulmecommunityfestival.co.uk/api_levfest_basic_data/";
-  return getData(url);
+  return getData(makeURL("basic_data"));
 }
