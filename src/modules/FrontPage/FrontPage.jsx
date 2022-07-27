@@ -2,7 +2,7 @@
 
 import "./FrontPage.css";
 import svglogo from "../../assets/levfestlogo.svg";
-// import herobg from "../../images/hero1.jpg";
+import herobg from "../../assets/images/hero1.jpg";
 import HeroContainer from "../../components/card/FrontPage/HeroContainer/HeroContainer";
 import FrontPageNewsDataCard from "../../components/card/FrontPage/FrontPageNewsDataCard/FrontPageNewsDataCard";
 import AdvertCards from "../../components/card/AdvertCard/AdvertCards";
