@@ -1,0 +1,21 @@
+.year_select {
+  text-align: center;
+  font-size: 1.8rem;
+  position: relative;
+}
+
+.year_select select {
+  margin: 1rem;
+  width: 8rem;
+  padding: 5px 35px 5px 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 4rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.year_select select option {
+  padding-bottom: 1rem;
+  cursor: pointer;
+}

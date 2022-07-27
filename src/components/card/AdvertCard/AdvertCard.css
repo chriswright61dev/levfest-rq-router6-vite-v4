@@ -1,0 +1,8 @@
+.advert {
+  max-width: 80vw;
+  margin: 1rem;
+  background-color: rgb(73, 165, 65);
+}
+.advert img {
+  width: 100%;
+}
