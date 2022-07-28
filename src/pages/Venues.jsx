@@ -26,10 +26,12 @@ function Venues() {
 
         <VenueList venueListData={VenueData} />
 
-        {/* once we have old data add this link */}
-        <h4 className="content-text-link">
-          <Link to="/venuesyear">Venues from Previous Years</Link>
-        </h4>
+        {/* once we have old data enable this link */}
+        {siteSettings.EnablePreviousYears ? (
+          <h4 className="content-text-link">
+            <Link to="/venuesyear">Venues from Previous Years</Link>
+          </h4>
+        ) : null}
       </div>
     );
   }
