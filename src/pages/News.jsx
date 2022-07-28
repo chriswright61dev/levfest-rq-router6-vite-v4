@@ -8,7 +8,6 @@ function News() {
   if (allNewsData.isLoading) {
     return <Loader />;
   } else {
-    console.log("allNewsData".data, allNewsData.data);
     return (
       <div className="content">
         <h1 className="page_h1">Latest News about the {siteSettings.Name}</h1>

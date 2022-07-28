@@ -5,7 +5,7 @@ import Loader from "../components/Loader/Loader";
 
 function VenuesAll() {
   const allVenueData = useVenue();
-  // get All the venues
+  // get All the venues - not for general use
 
   if (allVenueData.isLoading) {
     return <Loader />;

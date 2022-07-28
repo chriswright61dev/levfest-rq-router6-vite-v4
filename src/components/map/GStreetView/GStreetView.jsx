@@ -1,16 +1,17 @@
 import "./GStreetView.css";
 import { siteSettings } from "../../../config/config";
 
-function GStreetView(props) {
+function GStreetView({ latitude, longitude, heading, pitch }) {
   const baseUrl = "https://www.google.com/maps/embed/v1/";
   const Gkey = "?key=" + siteSettings.MapAPIKEY;
-  const location = `&location=
-  ${props.latitude},
-  ${props.longitude}`;
-  const heading = `&heading=${props.heading}`;
-  const pitch = `&pitch=${props.pitch}`;
+  const locationText = `&location=
+  ${latitude},
+  ${longitude}`;
+  const headingText = `&heading=${heading}`;
+  const pitchText = `&pitch=${pitch}`;
 
-  const sviewsrc = baseUrl + "streetview" + Gkey + location + heading + pitch;
+  const sviewsrc =
+    baseUrl + "streetview" + Gkey + locationText + headingText + pitchText;
 
   return (
     <div className="gstreetview">

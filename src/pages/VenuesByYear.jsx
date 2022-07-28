@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { siteSettings } from "../config/config";
-import useVenue from "../data/queryHooks/useVenue";
-import useVenueValidYear from "../data/queryHooks/useVenueValidYear";
+import useVenues from "../data/queryHooks/useVenues";
+import useVenuesValidYear from "../data/queryHooks/useVenuesValidYear";
 import YearSelect from "../components/YearSelect/YearSelect";
-
 import PageTop from "../components/utility/PageTop/PageTop";
 import VenueList from "../modules/Venues/VenueList/VenueList";
 import filterValidVenues from "../utilities/filterValidVenues";
@@ -17,9 +16,9 @@ function VenuesByYear() {
     setEventYearState({ year: yearValue });
   }
 
-  const allVenueData = useVenue();
+  const allVenueData = useVenues();
   // get all the venues
-  const validVenueList = useVenueValidYear(eventYearState.year);
+  const validVenueList = useVenuesValidYear(eventYearState.year);
   // get a list of valid venues for a year
 
   if (allVenueData.isLoading && validVenueList.isLoading) {
