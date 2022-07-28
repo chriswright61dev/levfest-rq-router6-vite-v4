@@ -18,9 +18,9 @@ function Navigation() {
           <Link to="/venues">Venues</Link>
         </li>
 
-        <li>
+        {/* <li>
           <Link to="/news">News</Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
