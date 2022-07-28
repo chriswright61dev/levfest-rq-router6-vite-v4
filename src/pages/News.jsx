@@ -1,4 +1,5 @@
 import NewsList from "../modules/News/NewsList/NewsList";
+import { siteSettings } from "../config/config";
 import Loader from "../components/Loader/Loader";
 import useNews from "../data/queryHooks/useNews";
 
@@ -10,7 +11,7 @@ function News() {
     console.log("allNewsData".data, allNewsData.data);
     return (
       <div className="content">
-        <h1 className="page_h1">Latest News about the Levenshulme Festival</h1>
+        <h1 className="page_h1">Latest News about the {siteSettings.Name}</h1>
         <NewsList newsListData={allNewsData.data} />
       </div>
     );

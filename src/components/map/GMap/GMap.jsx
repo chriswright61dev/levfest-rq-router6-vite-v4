@@ -1,12 +1,10 @@
-// import React from "react";
 import "./Gmap.css";
-
-function GMap(props) {
-  const GAPIKEY = process.env.REACT_APP_GAPIKEY;
+import { siteSettings } from "../../../config/config";
+function GMap({ latitude, longitude, querytext }) {
   const baseUrl = "https://www.google.com/maps/embed/v1/";
-  const Gkey = "?key=" + GAPIKEY;
-  const center = `&center=${props.latitude},${props.longitude}`;
-  const mapquery = `&q=${props.querytext}`;
+  const Gkey = "?key=" + siteSettings.MapAPIKEY;
+  const center = `&center=${latitude},${longitude}`;
+  const mapquery = `&q=${querytext}`;
   const zoom = "&zoom=18";
   const mapsrc = baseUrl + "place" + Gkey + mapquery + center + zoom;
 

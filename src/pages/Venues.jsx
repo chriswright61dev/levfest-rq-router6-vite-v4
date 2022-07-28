@@ -1,4 +1,5 @@
 import useVenue from "../data/queryHooks/useVenue";
+import { siteSettings } from "../config/config";
 import { Link } from "react-router-dom";
 import useVenueValidYear from "../data/queryHooks/useVenueValidYear";
 import PageTop from "../components/utility/PageTop/PageTop";
@@ -10,7 +11,7 @@ function Venues() {
   // get all the venues
   const validVenueList = useVenueValidYear(thisYear);
   // get a list of valid venues for a year
-
+  console.log("allVenueData", allVenueData);
   if (allVenueData.isLoading && validVenueList.isLoading) {
     return null;
   } else {
@@ -19,7 +20,9 @@ function Venues() {
     return (
       <div className="content">
         <PageTop />
-        <h1 className="page_h1">Manchester Irish Festival Venues {thisYear}</h1>
+        <h1 className="page_h1">
+          {siteSettings.Name} Venues {thisYear}
+        </h1>
 
         <VenueList venueListData={VenueData} />
 

@@ -1,10 +1,9 @@
-// import React from "react";
 import "./GStreetView.css";
+import { siteSettings } from "../../../config/config";
 
 function GStreetView(props) {
   const baseUrl = "https://www.google.com/maps/embed/v1/";
-  const GAPIKEY = process.env.REACT_APP_GAPIKEY;
-  const Gkey = "?key=" + GAPIKEY;
+  const Gkey = "?key=" + siteSettings.MapAPIKEY;
   const location = `&location=
   ${props.latitude},
   ${props.longitude}`;

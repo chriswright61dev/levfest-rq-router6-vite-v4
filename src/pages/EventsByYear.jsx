@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { siteSettings } from "../config/config";
 import YearSelect from "../components/YearSelect/YearSelect";
 import EventsList from "../modules/Events/EventsList/EventsList";
 import useEventYear from "../data/queryHooks/useEventYear";
@@ -21,7 +22,7 @@ function EventsByYear() {
     return (
       <div className="content">
         <h1 className="page_h1">
-          Manchester Irish Festival Events from {eventYearState.year}
+          {siteSettings.Name} Events from {eventYearState.year}
         </h1>
         <YearSelect changeFn={changeYear} />
         <EventsList eventListData={allEventData.data} />

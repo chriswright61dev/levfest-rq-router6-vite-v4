@@ -4,7 +4,7 @@ function EventsAtVenue({ venueEvents }) {
   return (
     <div className="eventsInVenue">
       {venueEvents.map((event) => {
-        console.log("event", event);
+        // console.log("event", event);
         return (
           <EventCard
             key={event.id}

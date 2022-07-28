@@ -12,15 +12,6 @@ function VenueDetail({ data, venueEvents }) {
     return (
       <div className="venue">
         <div className="venue_text">
-          {/* <div className="venue_small_image">
-            {vs.venue_image_1 ? (
-              <ImageContainer
-                source={vs.venue_image_1}
-                altText={vs.venue_title}
-                type="square"
-              />
-            ) : null}
-          </div> */}
           <h3 className="venue_name">{vs.venue_title}​</h3>
           <address>
             {vs.venue_address_1 ? <p>{vs.venue_address_1}</p> : null}

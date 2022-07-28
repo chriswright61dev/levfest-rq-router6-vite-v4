@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { siteSettings } from "../config/config";
 import useVenue from "../data/queryHooks/useVenue";
 import useVenueValidYear from "../data/queryHooks/useVenueValidYear";
 import YearSelect from "../components/YearSelect/YearSelect";
@@ -30,7 +31,7 @@ function VenuesByYear() {
       <div className="content">
         <PageTop />
         <h1 className="page_h1">
-          Manchester Irish Festival Venues {eventYearState.year}
+          {siteSettings.Name} Venues {eventYearState.year}
         </h1>
         <YearSelect changeFn={changeYear} />
         <VenueList venueListData={VenueData} />

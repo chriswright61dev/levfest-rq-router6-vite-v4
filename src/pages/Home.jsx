@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { siteSettings } from "../config/config";
 import FrontPage from "../modules/FrontPage/FrontPage";
 import Loader from "../components/Loader/Loader";
 // data hooks
@@ -34,7 +35,9 @@ function Home() {
 
     return (
       <div className="content">
-        <h1 className="page_h1">The Levenshulme Festival {thisyear}</h1>
+        <h1 className="page_h1">
+          The {siteSettings.Name} {thisyear}
+        </h1>
 
         <FrontPage
           news_bg={festData.news_header_bg_image}

@@ -1,4 +1,5 @@
 import useVenue from "../data/queryHooks/useVenue";
+import { siteSettings } from "../config/config";
 import VenueList from "../modules/Venues/VenueList/VenueList";
 import Loader from "../components/Loader/Loader";
 
@@ -13,7 +14,7 @@ function VenuesAll() {
 
     return (
       <div className="content">
-        <h1 className="page_h1">Levenshulme Festival Venues</h1>
+        <h1 className="page_h1">{siteSettings.Name} Venues</h1>
 
         <VenueList venueListData={VenueData} />
       </div>
